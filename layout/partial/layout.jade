@@ -6,7 +6,7 @@ html(lang=config.language)
         header
            .header.row 
                 a.logo-link(href=url_for())
-                    img(src=theme.logo)
+                    img(src=theme.logo, width='60px', height='60px')
                 include nav
                 .search
                     a#search_btn(href='#search')
@@ -14,10 +14,10 @@ html(lang=config.language)
             section.container
                 block container
                 .right-container
+                    include ../widget/catalog
                     include ../widget/category
                     include ../widget/tagcloud
                     include ../widget/recent
-                    include ../widget/catalog
         .right-menu
         .modal.search-modal
             .input-field
